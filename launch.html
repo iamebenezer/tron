@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRON</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="/images/main.jpeg" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <div id="stars"></div>
+    <script src="script.js"></script>
+    <style>
+        #stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: twinkle 1s infinite;
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+    </style>
+       <style>
+        /* Style for the mobile menu */
+        .mobile-menu {
+          display: none; /* Hidden by default */
+        }
+    
+        /* Style to show the mobile menu when active */
+        .mobile-menu.active {
+          display: block;
+        }
+        @font-face {
+            font-family: head;
+            src: url(/android_101/Android\ 101.ttf);
+        }
+        a{
+            font-family: head;
+        }
+        .neon-text {
+  font-family: 'Arial', sans-serif;
+  font-size: 48px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff00de, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+  animation: neon 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff00de, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 80px #ff00de, 0 0 90px #ff00de, 0 0 120px #ff00de, 0 0 170px #ff00de;
+  }
+}
+      </style>
+      <nav class="py-4 fixed top-0 left-0 w-full z-10">
+        <div class="container mx-auto flex items-center justify-between px-4">
+          <!-- Logo -->
+          <div class="text-white text-2xl font-bold">
+            <img src="/images/Robo-trans1-tiny.png" class="w-8" alt="">
+          </div>
+      
+          <!-- Navbar links (hidden on smaller screens) -->
+          <div class="hidden md:flex space-x-4 ">
+            <a href="#" class="text-white hover:text-gray-300">Home</a>
+            <a href="#about" class="text-white hover:text-gray-300">About</a>
+            <a href="#feature" class="text-white hover:text-gray-300">Features</a>
+            <a href="#road" class="text-white hover:text-gray-300">Roadmap</a>
+            <a href="#how" class="text-white hover:text-gray-300">How to Buy</a>
+            <a href="#token" class="text-white hover:text-gray-300">Tokenomics</a>
+            <a href="#buy" class="text-white hover:text-gray-300">Buy/Swap</a>
+        
+        </div>
+      
+          <!-- Mobile Menu Button (visible on small screens) -->
+          <div class="md:hidden">
+            <button id="mobile-menu-button" class="text-white focus:outline-none">
+              <!-- Hamburger icon -->
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
+        
+      <!-- Mobile Menu (hidden by default) -->
+      <div id="mobile-menu" class="mobile-menu bg-[#010214]">
+        <div class="px-4 py-2 justify-center items-center flex-col flex">
+            <a href="#about" class="block py-2 text-white hover:text-gray-300">Home</a>
+            
+            <a href="#about" class="block py-2 text-white hover:text-gray-300">About</a>
+            
+            <a href="#feature" class="block py-2 text-white hover:text-gray-300">Features</a>
+            <a href="#road" class="block py-2 text-white hover:text-gray-300">Roadmap</a>
+            <a href="#how" class=" block py-2 text-white hover:text-gray-300">How to Buy</a>
+            <a href="#token" class="block py-2 text-white hover:text-gray-300">Tokenomics</a>
+            <a href="#buy" class="block py-2 text-white hover:text-gray-300">Buy/Swap</a>
+        
+        </div>
+      </div>
+      
+      <script>
+        // JavaScript to toggle the mobile menu
+        document.getElementById("mobile-menu-button").addEventListener("click", function() {
+          var mobileMenu = document.getElementById("mobile-menu");
+          mobileMenu.classList.toggle("active");
+        });
+      </script>
+            <section class="bg-[url(./images/launch.jpg)] flex justify-center items-center bg-no-repeat bg-cover h-screen w-screen">
+                        <h1 style="font-family: head;" class="text-[60px] text-white text-center neon-text" 
+                       data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500"
+                        >COMING SOON</h1>
+            </section>
+
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script>
+                AOS.init();
+              </script>
+</body>
+</html>
